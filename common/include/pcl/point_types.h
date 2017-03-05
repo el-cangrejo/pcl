@@ -260,6 +260,11 @@ namespace pcl
     */
   struct FPFHSignature33;
   
+  /** \brief Members: float fpfh[66]
+    * \ingroup common
+    */
+  struct dFPFHSignature66;
+  
   /** \brief Members: float vfh[308]
     * \ingroup common
     */
@@ -607,6 +612,10 @@ POINT_CLOUD_REGISTER_POINT_STRUCT (pcl::SHOT1344,
 
 POINT_CLOUD_REGISTER_POINT_STRUCT (pcl::FPFHSignature33,
     (float[33], histogram, fpfh)
+)
+
+POINT_CLOUD_REGISTER_POINT_STRUCT (pcl::dFPFHSignature66,
+    (float[66], histogram, fpfh)
 )
 
 POINT_CLOUD_REGISTER_POINT_STRUCT (pcl::BRISKSignature512,

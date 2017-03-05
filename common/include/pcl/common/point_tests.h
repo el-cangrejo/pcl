@@ -83,6 +83,7 @@ namespace pcl
   template<> inline bool isFinite<pcl::PPFRGBSignature> (const pcl::PPFRGBSignature&) { return (true); }
   template<> inline bool isFinite<pcl::NormalBasedSignature12> (const pcl::NormalBasedSignature12&) { return (true); }
   template<> inline bool isFinite<pcl::FPFHSignature33> (const pcl::FPFHSignature33&) { return (true); }
+  template<> inline bool isFinite<pcl::dFPFHSignature66> (const pcl::dFPFHSignature66&) { return (true); }
   template<> inline bool isFinite<pcl::VFHSignature308> (const pcl::VFHSignature308&) { return (true); }
   template<> inline bool isFinite<pcl::ESFSignature640> (const pcl::ESFSignature640&) { return (true); }
   template<> inline bool isFinite<pcl::IntensityGradient> (const pcl::IntensityGradient&) { return (true); }

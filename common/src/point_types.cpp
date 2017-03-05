@@ -351,6 +351,14 @@ namespace pcl
   }
 
   std::ostream& 
+  operator << (std::ostream& os, const dFPFHSignature66& p)
+  {
+    for (int i = 0; i < 66; ++i)
+    os << (i == 0 ? "(" : "") << p.histogram[i] << (i < 65 ? ", " : ")");
+    return (os);
+  }
+
+  std::ostream& 
   operator << (std::ostream& os, const VFHSignature308& p)
   {
     for (int i = 0; i < 308; ++i)

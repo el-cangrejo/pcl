@@ -77,6 +77,7 @@
   (pcl::PPFRGBSignature)        \
   (pcl::NormalBasedSignature12) \
   (pcl::FPFHSignature33)        \
+  (pcl::dFPFHSignature66)        \
   (pcl::VFHSignature308)        \
   (pcl::GRSDSignature21)        \
   (pcl::ESFSignature640)        \
@@ -145,6 +146,7 @@
   (pcl::PPFRGBSignature)        \
   (pcl::NormalBasedSignature12) \
   (pcl::FPFHSignature33)        \
+  (pcl::dFPFHSignature66)        \
   (pcl::VFHSignature308)        \
   (pcl::GRSDSignature21)        \
   (pcl::ESFSignature640)        \
@@ -1356,6 +1358,19 @@ namespace pcl
     static int descriptorSize () { return 33; }
 
     friend std::ostream& operator << (std::ostream& os, const FPFHSignature33& p);
+  };
+
+
+  PCL_EXPORTS std::ostream& operator << (std::ostream& os, const dFPFHSignature66& p);
+  /** \brief A point structure representing the d Fast Point Feature Histogram (dFPFH).
+    * \ingroup common
+    */
+  struct dFPFHSignature66
+  {
+    float histogram[66];
+    static int descriptorSize () { return 66; }
+
+    friend std::ostream& operator << (std::ostream& os, const dFPFHSignature66& p);
   };
 
   PCL_EXPORTS std::ostream& operator << (std::ostream& os, const VFHSignature308& p);
